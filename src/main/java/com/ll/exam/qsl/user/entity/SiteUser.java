@@ -1,8 +1,6 @@
 package com.ll.exam.qsl.user.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -10,6 +8,8 @@ import javax.persistence.*;
 @Setter
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class SiteUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +23,4 @@ public class SiteUser {
     @Column(unique = true)
     private String email;
 
-    public SiteUser() {
-
-    }
 }
